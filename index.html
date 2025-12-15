@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitPro Gym – 30 Day Transformation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+    .hover-scale:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-white px-6">
+  <div class="max-w-4xl text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-up">30‑Day Body Transformation Program</h1>
+    <p class="text-lg text-slate-300 mb-8 fade-up">Structured workouts • Nutrition guidance • Real accountability</p>
+    <a href="#pricing" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-semibold px-10 py-4 rounded-2xl shadow-lg hover-scale">Book Free Trial</a>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-14 fade-up">Why FitPro Gym Works</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white p-8 rounded-2xl shadow hover-scale fade-up">
+        <h3 class="text-xl font-semibold mb-3">Smart Training Plans</h3>
+        <p class="text-slate-600">Programs tailored for fat loss, muscle gain, or full body recomposition.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow hover-scale fade-up">
+        <h3 class="text-xl font-semibold mb-3">Nutrition Support</h3>
+        <p class="text-slate-600">Simple, sustainable diet plans that fit your lifestyle.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow hover-scale fade-up">
+        <h3 class="text-xl font-semibold mb-3">Progress Tracking</h3>
+        <p class="text-slate-600">Weekly assessments to ensure visible and measurable results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="py-20 bg-slate-100 text-center">
+  <h2 class="text-3xl font-bold mb-4 fade-up">Next Batch Starts In</h2>
+  <div id="countdown" class="text-4xl font-bold text-emerald-600 fade-up"></div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-20 px-6 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 fade-up">Simple Pricing</h2>
+    <div class="bg-slate-50 p-10 rounded-2xl shadow-lg fade-up">
+      <h3 class="text-2xl font-semibold mb-4">30‑Day Transformation</h3>
+      <p class="text-5xl font-bold text-emerald-600 mb-6">₹2,999</p>
+      <ul class="text-slate-600 mb-8 space-y-2">
+        <li>✔ Personal workout plan</li>
+        <li>✔ Nutrition guidance</li>
+        <li>✔ Weekly progress tracking</li>
+      </ul>
+      <a href="#cta" class="bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-semibold px-10 py-4 rounded-2xl hover-scale">Join Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 bg-slate-100 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 fade-up">Member Results</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow fade-up">"Lost 6kg in one month. Structured & motivating."<br><strong>– Rahul</strong></div>
+      <div class="bg-white p-8 rounded-2xl shadow fade-up">"Best gym experience I’ve had. Very disciplined."<br><strong>– Ananya</strong></div>
+      <div class="bg-white p-8 rounded-2xl shadow fade-up">"Perfect for beginners who want results."<br><strong>– Karan</strong></div>
+    </div>
+    <p class="text-sm text-slate-500 mt-6">*Testimonials are illustrative for demo purposes</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="py-20 px-6 bg-slate-900 text-white">
+  <div class="max-w-3xl mx-auto text-center fade-up">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">Book Your Free Trial Session</h2>
+    <form class="grid gap-4 max-w-md mx-auto">
+      <input type="text" placeholder="Your Name" class="p-3 rounded-xl text-slate-800" required>
+      <input type="tel" placeholder="Phone Number" class="p-3 rounded-xl text-slate-800" required>
+      <select class="p-3 rounded-xl text-slate-800">
+        <option>Fat Loss</option>
+        <option>Muscle Gain</option>
+        <option>General Fitness</option>
+      </select>
+      <button class="bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-semibold py-3 rounded-xl hover-scale">Submit</button>
+    </form>
+  </div>
+</section>
+
+<footer class="py-6 text-center text-sm text-slate-500">© 2025 FitPro Gym • Demo Website</footer>
+
+<script>
+  // Scroll animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Countdown timer
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 7);
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m`;
+  }, 1000);
+</script>
+
+</body>
+</html>
